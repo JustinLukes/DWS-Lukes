@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>1. Vytvoření tlačítka button - kliknutí na tlačítko vyskočí alert.</h3>
+
+    <button onclick="fun1()">CLICK ME</button>
+
+    <h3>2. Vytvoření tlačítka button - kliknutí na tlačítko se změní text uvnitř button.</h3>
+    <button onclick="fun2()" id="button2">CLICK ME</button>
+
+
+    <h3 id="text3">3. Vytvoření textu a button - kliknutí na tlačítko se změní vytvořený text.</h3>
+    <button onclick="fun3()">CLICK ME</button>
+
+    <h3>4. Vytvoření button - kliknutím na tlačítko se napíše text. </h3>
+    <button onclick="fun4()">CLICK ME</button>
+    <p id="text4" style="display:none;">Jak se jmenuješ</p>
+
+    <h3>5. Vytvořění kolonky a button - napsání do label jméno a kliknutím na tlačítko vyskočí alert s pozdravem.</h3>
+    <label for="nameInput">Zadejte své jméno: </label>
+    <input type="text" id="nameInput" placeholder="Vaše jméno">
+    <button onclick="fun5()">Pozdravit</button>
+
+
+
+    <h3>6. Vytvoření textu - přejetím na text myší se text změní.</h3>
+    <p id="text6"></p>
+
+
+    <h3>7. Vytvořte button - po kliknutí na button se zobrazí aktuální čas.</h3>
+    <button onclick="fun7()">Zobrazit čas</button>
+    <p id="text7"></p>
+
+    <h3>8. Vytvořte button - po kliknutí na button se zobrazí aktuální datum.</h3>
+    <button onclick="fun8()">Zobrazit čas</button>
+    <p id="text8"></p>
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
