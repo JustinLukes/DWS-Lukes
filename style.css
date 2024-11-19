@@ -32,3 +32,69 @@ input{
 #image11{
     transition: 1s;
 }
+
+/* Styl pro seznam úkolů */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#taskList li {
+    background: #222;
+    color: white;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Styl pro dokončené úkoly */
+.task-text.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Styl tlačítek */
+.complete-btn,
+.delete-btn {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.complete-btn {
+    background: #28a745;
+    color: white;
+}
+
+.complete-btn:hover {
+    background: #1e7e34;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #a71d2a;
+}
+.edit-btn {
+    background: #ffc107;
+    color: black;
+}
+
+.edit-btn:hover {
+    background: #d39e00;
+}

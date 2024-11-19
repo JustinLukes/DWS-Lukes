@@ -68,3 +68,40 @@ image.addEventListener("mouseover", function() {
 image.addEventListener("mouseout", function() {
     image.style.transform = "scale(1.0)";
 });
+
+function addTask() {
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+
+    if (taskInput.value.trim()) {
+        const li = document.createElement("li");
+
+        li.innerHTML = `
+            <span class="task-text">${taskInput.value}</span>
+            <button class="complete-btn" onclick="completeTask(this)">✓</button>
+            <button class="delete-btn" onclick="deleteTask(this)">✗</button>
+            <button class="edit-btn" onclick="editTask(this)">✎</button>
+        `;
+
+        taskList.appendChild(li);
+        taskInput.value = ""; 
+    } else {
+        alert("Prosím, zadejte úkol.");
+    }
+}
+
+function deleteTask(button) {
+    button.parentElement.remove(); 
+}
+function completeTask(button) {
+    const taskText = button.parentElement.querySelector(".task-text");
+    taskText.classList.toggle("completed");
+}
+
+function editTask(button) {
+    const taskText = button.parentElement.querySelector(".task-text");
+    const newTask = prompt("Upravte úkol:", taskText.textContent);
+    if (newTask !== null) {
+        taskText.textContent = newTask;
+    }
+}
